@@ -51,7 +51,7 @@ class AddFishForm extends React.Component {
             name="image"
             ref={this.imageRef}
             type="text"
-            placeholder="Name"
+            placeholder="Image"
           />
           <button type="submit">+ Add fish</button>
         </form>
