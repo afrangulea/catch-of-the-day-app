@@ -4,3 +4,5 @@ import "./css/style.css";
 import Router from "./components/Router";
 
 render(<Router />, document.querySelector("#main"));
+
+// alert("hey!");

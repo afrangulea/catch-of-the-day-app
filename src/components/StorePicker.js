@@ -2,6 +2,7 @@ import React from "react";
 import { getFunName } from "../helpers";
 
 class StorePicker extends React.Component {
+  //Constructor function is a Method that will run before StorePicker component is created
   //   constructor() {
   //     super();
   //     this.goToStore = this.goToStore.bind(this);

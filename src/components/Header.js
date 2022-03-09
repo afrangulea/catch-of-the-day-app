@@ -1,5 +1,6 @@
 import React from "react";
 
+//stateless functional component with an implicit return
 const Header = (props) => (
   <React.Fragment>
     <header className="top">

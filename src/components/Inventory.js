@@ -2,11 +2,6 @@ import React from "react";
 import AddFishForm from "./AddFishForm";
 
 class Inventory extends React.Component {
-  loadSampleFishes = () => {
-    alert("samples are loading");
-    console.log("samples");
-  };
-
   render() {
     return (
       <div className="inventory">
