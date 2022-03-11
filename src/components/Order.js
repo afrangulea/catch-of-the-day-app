@@ -1,5 +1,6 @@
 import React from "react";
 import { formatPrice } from "../helpers";
+
 class Order extends React.Component {
   renderOrder = (key) => {
     const fish = this.props.fishes[key];
@@ -16,13 +17,16 @@ class Order extends React.Component {
 
     return (
       <li key={key}>
-        {count} lbs {fish.name}
+        {count} kg {fish.name}
         {formatPrice(count * fish.price)}
       </li>
     );
   };
   render() {
+    //Store order IDs
     const orderIds = Object.keys(this.props.order);
+
+    //Total cost
     const total = orderIds.reduce((prevTotal, key) => {
       const fish = this.props.fishes[key];
       const count = this.props.order[key];
@@ -38,7 +42,7 @@ class Order extends React.Component {
     return (
       <div className="order-wrap">
         <h2>Order</h2>
-        {orderIds.map(this.renderOrder)}
+        <ul className="order">{orderIds.map(this.renderOrder)}</ul>
 
         <div className="total">
           <strong>{formatPrice(total)}</strong>
