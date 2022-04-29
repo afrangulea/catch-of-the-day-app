@@ -4,7 +4,8 @@ import AddFishForm from "./AddFishForm";
 class EditFishForm extends React.Component {
   handleChange = (event) => {
     // console.log(event.target.value);
-    // console.log(event.target.name);
+    console.log(event.target.name);
+    console.log(this.props.index);
     //update fishes
     //copy of current fish
     const updatedFish = {
@@ -50,6 +51,9 @@ class EditFishForm extends React.Component {
           value={this.props.fish.image}
           onChange={this.handleChange}
         />
+        <button onClick={() => this.props.deleteFish(this.props.index)}>
+          Remove fish
+        </button>
       </div>
     );
   }
